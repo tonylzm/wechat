@@ -1,0 +1,13 @@
+<!--pages/mysql/mysql.wxml-->
+<input bindinput="getId" placeholder="输入id"></input>
+<input bindinput="getName" placeholder="输入姓名"></input>
+<input bindinput="getAge"placeholder="输入年龄"></input>
+<input bindinput="getGender"placeholder="输入性别"></input>
+
+<button bindtap="add">增</button>
+<button bindtap="delete">删</button>
+<button bindtap="update">改</button>
+<button bindtap="getall">查</button>
+<block wx:for="{{datalist}}" wx:key="index">
+  <view>{{item.id}},{{item.name}},{{item.age}},{{item.gender}}</view>
+</block>
