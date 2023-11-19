@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "time-picker": "../dateselect/dateselect"
+}
+
+}

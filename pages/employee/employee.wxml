@@ -1,0 +1,18 @@
+<!--pages/employee/employee.wxml-->
+<view class="login-card">
+  <view class="title">内部员工登录</view>
+  <form bindsubmit="submit" bindreset="onReset">
+    <view class="input-group">
+      <text>员工号：</text>
+      <input bindinput="getusername" type="text" placeholder="请输入员工号" />
+    </view>
+    <view class="input-group">
+      <text>密码：</text>
+      <input style="width: 478rpx; height: 60rpx; display: block; box-sizing: border-box" bindinput="getpassword" type="password" placeholder="请输入密码" />
+    </view>
+    <button class="login-button" form-type="submit">登录</button>
+    <button class="reset-button" form-type="reset">重置</button>
+  </form>
+</view>
+
+

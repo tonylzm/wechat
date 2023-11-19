@@ -1,0 +1,9 @@
+/* invite/pages/detailed-info/detailed-info.wxss */
+.card {
+  position: relative;
+  width: 80%; /* 您可以根据需要调整卡片的宽度 */
+  background: #ffffff;
+  margin: 0 auto; /* 水平居中卡片 */
+  box-sizing: border-box;
+  padding: 20rpx; /* 为卡片添加一些内边距 */
+}

@@ -1,0 +1,32 @@
+<!--pages/Audit/Audit.wxml-->
+<view class="card" style="width: 707rpx; height: 1085rpx; display: block; box-sizing: border-box; left: -1rpx; top: 78rpx; position: relative">
+  <image style="position: absolute; left: 254rpx; top: 149rpx; width: 200rpx; height: 200rpx; display: block; box-sizing: border-box" src="../images/5.png" />
+  <text style="position: relative; left: 19rpx; top: 66rpx;line-height: 64rpx;">人员信息</text>
+
+  <view style="position: relative; width: 525rpx; background: #ffffff; height: 554rpx; left: 163rpx; top: 340rpx; display: block; box-sizing: border-box">
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -98rpx; line-height: 64rpx; width: 261rpx">访客姓名：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx" >{{visitorName}}</text>
+  
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">所属公司：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -93rpx">{{visitorCompany}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">拉黑事由：</text>
+<textarea style="position: relative; left: -98rpx; top: -29rpx; width: 582rpx; height: 223rpx; display: block; box-sizing: border-box" bindinput="onBlockReasonInput" value="{{blockReason}}"></textarea>
+
+ 
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 237rpx">操作员：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx">{{blockPerson}}</text> 
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -28rpx; left: -100rpx; line-height: 64rpx; width: 333rpx">拉黑时间：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -92rpx" >{{blockTime}}</text> 
+
+    </view>
+    <view style="height: 100rpx; position: relative; left: -1rpx; top: 561rpx">
+      <button class="approve" bindtap="onRem"  style="position: relative; left: 272rpx; top: 42rpx">移除</button>
+      <button class="refused" bindtap="onSubre"  style="position: relative; left: -85rpx; top: -42rpx">提交原因</button>
+    </view>
+     
+
+  </view>

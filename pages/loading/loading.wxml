@@ -1,0 +1,22 @@
+ <!--pages/loading/loading.wxml-->
+ 
+ <image style="position: relative; left: 194rpx; top: 252rpx" class="image1" src="{{image1}}" />
+
+ <view style="display: flex; justify-content: center; align-items: center; position: relative; left: -7rpx; top: 300rpx">
+  <text>{{text1}}</text>
+</view>
+
+<view wx:if="{{showview}}" style="justify-content: center; align-items: center;position: relative; left: -2rpx; top: 792rpx; width: 750rpx; height: 163rpx; display: block; box-sizing: border-box">
+  <image style="position: relative; left: 313rpx; top: 8rpx; width: 116rpx; height: 116rpx; display: inline-block; box-sizing: border-box" src="../images/22.png" bindtap="goprofile" />
+  <text style="position: relative; left: 196rpx; top: 38rpx">个人中心</text>
+</view>
+
+<view wx:if="{{showview1}}" style="justify-content: center; align-items: center;position: relative; left: -2rpx; top: 792rpx; width: 750rpx; height: 163rpx; display: block; box-sizing: border-box">
+  <image style="position: relative; left: 313rpx; top: 8rpx; width: 116rpx; height: 116rpx; display: inline-block; box-sizing: border-box" src="../images/23.png" bindtap="back" />
+  <text style="position: relative; left: 196rpx; top: 38rpx">返回申请</text>
+</view>
+
+<view wx:if="{{showview2}}" style="justify-content: center; align-items: center;position: relative; left: -2rpx; top: 792rpx; width: 750rpx; height: 163rpx; display: block; box-sizing: border-box">
+  <image style="position: relative; left: 313rpx; top: 8rpx; width: 116rpx; height: 116rpx; display: inline-block; box-sizing: border-box" src="../images/23.png" bindtap="home" />
+  <text style="position: relative; left: 196rpx; top: 38rpx">回到主页</text>
+</view>

@@ -1,0 +1,20 @@
+<!--invite/pages/endvisit/endvisit.wxml-->
+<text style="position: relative; left: 31rpx; top: 80rpx" data-status="未审核" bindtap="click">即将访问</text>
+<text style="position: relative; left: 247rpx; top: 80rpx" data-status="已审核" bindtap="click">正在访问</text>
+<text style="position: relative; left: 432rpx; top: 80rpx" data-status="黑名单" bindtap="click">历史</text>
+
+<block wx:for="{{list}}" wx:key="index">
+
+<!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+
+<view class="view_tupian_wenzi" bindtap="click" id="{{index}}" style="position: relative; left: 2rpx; top: 116rpx">
+  <image  class="image_1" src="../images/5.png" />
+  <!-- 包裹两行文字 -->
+  <view class="view_wenzi2">
+    <image style="position: relative; left: 391rpx; top: 38rpx"  class="image_2" src="{{item.url}}" />
+    <text style="position: relative; left: -3rpx; top: -62rpx">姓名:{{item.name}}</text>
+    <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: -66rpx">联系电话:{{item.content}}</text>
+  </view> 
+</view>
+</block>

@@ -1,0 +1,11 @@
+<!--pages/other-login/other-login.wxml-->
+<view class="login-card" style="width: 638rpx; height: 324rpx; display: flex; box-sizing: border-box; position: relative; left: 1rpx; top: -13rpx">
+  <view class="title" style="position: relative; left: 1rpx; top: -22rpx">访客人员信息查询</view>
+  <form bindsubmit="submit" bindreset="onReset">
+    <view class="input-group">
+      <text>手机号：</text>
+      <input name="phoneNumber" bindinput="getusername" type="text" placeholder="请输入手机号" maxlength="11"/>
+    </view>
+    <button class="login-button" formType="submit" style="position: relative; left: 150rpx; top: 24rpx">进入查询页</button>
+  </form>
+</view>

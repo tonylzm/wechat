@@ -1,0 +1,5 @@
+<!--pages/common-login/common-qrcode/common-qrcode.wxml-->
+<view style="display: flex; justify-content: center; align-items: center; position: relative; left: 1rpx; top: 458rpx">
+<text style="position: relative; left: 2rpx; top: 0rpx; width: 579rpx; height: 37rpx; display: block; box-sizing: border-box">请对准闸机,二维码有效期为:{{time1}}</text>
+</view>
+<image src="{{qrCodeImage}}" mode="aspectFit" style="width: 200px; height: 200px; position: relative; left: 194rpx; top: 483rpx"></image>

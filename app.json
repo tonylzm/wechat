@@ -1,17 +1,39 @@
 {
   "pages": [
+    "pages/firstpg/firstpg",
+    "pages/employee/employee",
+    "pages/employee/qrcode/qrcode",
+    "pages/employee/profile/profile",
+    "pages/employee/invite/invite",
+    "pages/employee/home/home",
+    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/home.wxml",
-    "pages/home/home",
-    "pages/main/main"
+    "pages/common-invite/common-invite",
+    "pages/common-login/common-login",
+    "pages/application/application",
+    "pages/Audit/Audit",
+    "pages/block-manage/block-manage",
+    "pages/new-staff/new-staff",
+    "pages/loading/loading",
+    "pages/other-login/other-login",
+    "pages/common-login/common-qrcode/common-qrcode",
+    "pages/common-login/common-profile/common-profile",
+    "invite/pages/endvisit/endvisit",
+    "invite/pages/logistics/logistics",
+    "invite/pages/check/check",
+    "invite/pages/detailed-info/detailed-info",
+    "invite/pages/construction/construction",
+    "invite/pages/power/power",
+    "invite/pages/editpower/editpower",
+    "invite/pages/dateselect/dateselect",
+    "info/pages/visitinfo/visitinfo"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,8 @@
+<view>
+<text style="position: relative; left: 303rpx; top: 458rpx">请对准闸机</text>
+</view>
+<!-- <view class="">
+	<canvas style="width: 200px; height: 200px; margin: 0 auto; position: relative; left: 1rpx; top: 193rpx" canvas-id="myQrcode"></canvas>
+</view> -->
+
+<image src="{{qrCodeImage}}" mode="aspectFit" style="width: 200px; height: 200px; position: relative; left: 194rpx; top: 483rpx"></image>

@@ -1,0 +1,43 @@
+<!--invite/pages/editpower/editpower.wxml-->
+<view class="card" style="width: 707rpx; height: 1085rpx; display: block; box-sizing: border-box; left: 1rpx; top: 47rpx; position: relative">
+  <image style="position: absolute; left: 254rpx; top: 149rpx; width: 200rpx; height: 200rpx; display: block; box-sizing: border-box" src="../../../pages/images/5.png" />
+  <text style="position: relative; left: 19rpx; top: 66rpx;line-height: 64rpx;">人员信息</text>
+
+  <view style="position: relative; width: 525rpx; background: #ffffff; height: 1096rpx; left: 134rpx; top: 346rpx; display: block; box-sizing: border-box">
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -98rpx; line-height: 64rpx; width: 261rpx">姓名：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx" >{{staffName}}</text>
+  
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">工号：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -93rpx">{{staffId}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">职务：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx">{{staffAffiliatedUnit}}</text>
+
+    <view class="form-group" style="position: relative; width: 636rpx; display: flex; flex-direction: column; align-items: flex-start; box-sizing: border-box; left: -100rpx; top: -55rpx; height: 251rpx">
+  <text style="position: relative; left: 1rpx; top: 0rpx">主权限设置：</text>
+  <checkbox-group bindchange="checkboxChange">
+    <view wx:for="{{checkboxItems}}" wx:key="index" class="checkbox-item">
+    <label class="checkbox">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+    </view>
+  </checkbox-group>
+</view>
+
+
+<view class="form-group" style="position: relative; width: 636rpx; display: flex; flex-direction: column; align-items: flex-start; box-sizing: border-box; left: -100rpx; top: -55rpx; height: 251rpx">
+  <text style="position: relative; left: 1rpx; top: 0rpx">副权限设置：</text>
+  <checkbox-group bindchange="checkboxChange1">
+    <view wx:for="{{checkboxItems1}}" wx:key="index" class="checkbox-item">
+    <label class="checkbox">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+    </view>
+  </checkbox-group>
+</view>
+<view>
+<button style="position: absolute; left: 199rpx; top: 920rpx" bind:tap="confirm">确认</button>
+</view>
+    </view>
+  </view>

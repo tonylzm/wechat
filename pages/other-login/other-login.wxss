@@ -1,0 +1,64 @@
+/* pages/other-login/other-login.wxss */
+/* pages/employee/employee.wxss */
+.login-card {
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx;
+  width: 80%;
+  margin: 400rpx auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 上下居中 */
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+input {
+  flex: 1;
+  height: 60rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 0 10rpx;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+/* 
+.login-button,
+.reset-button {
+  display: inline-block;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  padding: 15rpx;
+  font-size: 20rpx;
+} */
+
+.login-button {
+  background-color: #007aff;
+  color: #fff;
+  font-size: small;
+  border-radius: 5rpx;
+  width: 300rpx;
+  height: 76rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center; /* 文本水平居中 */
+  line-height: 76rpx; /* 文本垂直居中 */
+  vertical-align: middle; /* 文本垂直居中 */
+}

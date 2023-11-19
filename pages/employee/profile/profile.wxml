@@ -1,0 +1,25 @@
+<view class="card" style="width: 653rpx; height: 456rpx; display: block; box-sizing: border-box; left: -1rpx; top: 37rpx; position: relative">
+  <image style="position: relative; width: 250rpx; height: 250rpx; display: inline-block; box-sizing: border-box; left: 182rpx; top: 64rpx" src="../../images/10.png" />
+  <view style="display: flex; justify-content: center; align-items: center; position: relative; left: 2rpx; top: 109rpx">
+<text style="position: relative; left: 1rpx; top: 1rpx">UID:{{text}}</text>
+</view>
+
+
+
+
+  <view  style="position: relative; left: 20rpx; top: 248rpx">
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">真实姓名：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{visitorName}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">部门职务：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{affiliatedUnit}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">员工工号：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{idcard}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">联系方式：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{visitorPhone}}</text>
+  </view>
+  </view>
+
+  

@@ -1,0 +1,87 @@
+
+<text style="position: relative; left: 125rpx; top: 122rpx" data-type="staff" bindtap="toggleContent">员工管理</text>
+<text style="position: relative; left: 378rpx; top: 122rpx" data-type="inside" bindtap="toggleContent">内部管控</text>
+<button class="new" bind:tap="newstaff"  style="position: relative; left: 361rpx; top: 33rpx">+ 新增员工</button>
+
+<view hidden="{{!staff}}">
+<view  class='help' style="width: 698rpx; height: 700rpx; display: block; box-sizing: border-box; position: relative; left: 1rpx; top: 178rpx">
+  <view class="view_tupian_wenzi" bindtap="board"  style="position: relative; left: 1rpx; top: 0rpx">
+          <image class="image_1" src="../../../pages/images/5.png" />
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <image style="position: relative; left: 391rpx; top: 38rpx" class="image_2" src="{{item.url}}" />
+            <text style="position: relative; left: -3rpx; top: -62rpx">姓名:{{board}}</text>
+            <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: -66rpx">职务:董事长</text>
+          </view> 
+        </view>
+        <view class="view_tupian_wenzi" bindtap="board" style="position: relative; left: 1rpx; top: 0rpx">
+          <image class="image_1" src="../../../pages/images/5.png" />
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <image style="position: relative; left: 391rpx; top: 38rpx" class="image_2" src="{{item.url}}" />
+            <text style="position: relative; left: -3rpx; top: -62rpx">姓名:{{ceo}}</text>
+            <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: -66rpx">职务:CEO</text>
+          </view> 
+        </view>
+  <view class='help_item' wx:for="{{questList}}" wx:key="index">
+    <view class='title' data-index='{{index}}' catchtap='panel'>
+      <view class='title_1'>{{item.questions}}</view>
+      <view class='title_2'><image src="../../../pages/images/{{item.t ? 'up':'down'}}.png" mode="widthFix"></image></view>
+    </view>
+    <view class='detail' style="height:{{ item.t?'':0}}">
+      <block wx:for="{{item.list}}" wx:key="index">
+        <!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+        <view class="view_tupian_wenzi" bindtap="clickItem" data-index="{{index}}" style="position: relative; left: 1rpx; top: 0rpx">
+          <image class="image_1" src="../../../pages/images/5.png" />
+          <!-- 包裹两行文字 -->
+          <view class="view_wenzi2">
+            <image style="position: relative; left: 391rpx; top: 38rpx" class="image_2" src="{{item.url}}" />
+            <text style="position: relative; left: -3rpx; top: -62rpx">姓名:{{item.name}}</text>
+            <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: -66rpx">所在单位:{{item.content}}</text>
+          </view> 
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+</view>
+
+<!-- yourPage.wxml -->
+<view hidden="{{!contorl}}">
+
+  <view  class="page-container" style="width: 720rpx; height: 1063rpx; display: block; box-sizing: border-box; left: 2rpx; top: 145rpx">
+  
+  <text class="title" style="width: 702rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -37rpx">内部管控</text>
+  <view>设置管控时间段</view>
+
+  <text class="label">开始时间：</text>
+  <time-picker mode="dateTime" class="picker" id="start" placeholder="请选择时间" bind:onPickerChange="onPickerChange"></time-picker>
+
+  <text class="label">结束时间：</text>
+  <time-picker mode="dateTime" class="picker" id="end" placeholder="请选择时间" bind:onPickerChange="onPickerChange"></time-picker>
+
+  <view class="form-group">
+    <text>设置管控地点：</text>
+    <checkbox-group bindchange="checkboxChange" class="checkbox-group">
+      <view wx:for="{{checkboxItems}}" wx:key="index" class="checkbox-item">
+        <label class="checkbox">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+
+  <view class="form-group form-group-2">
+    <text>设置管控事由：</text>
+    <checkbox-group bindchange="checkboxChange1" class="checkbox-group">
+      <view wx:for="{{checkboxItems1}}" wx:key="index" class="checkbox-item">
+        <label class="checkbox">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <button style="position: absolute; left: 388rpx; top: 996rpx" bind:tap="confirm">确认</button>
+
+</view>
+</view>

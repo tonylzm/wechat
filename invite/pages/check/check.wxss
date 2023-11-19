@@ -1,0 +1,7 @@
+/* invite/pages/check/check.wxss */
+button{
+  width: 469rpx;
+  height: 84rpx;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 151, 241);
+}

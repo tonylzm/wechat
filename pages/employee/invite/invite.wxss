@@ -1,0 +1,61 @@
+/* 样式文件 */
+.card {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.step {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input, .textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #007AFF;
+}
+
+.submit-button {
+  background-color: #007AFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* 样式文件（invite.wxss） */
+.input {
+  width: 691rpx;
+  height: 78rpx;
+  display: block;
+  box-sizing: border-box;
+}
+
+.input:focused {
+  border-color: blue; /* 输入框获得焦点时的边框颜色 */
+}
+
+
+/* 红色提示框可根据需要自行添加 */
+/* 红色提示框样式 */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 表单输入框错误样式 */
+.input.error, .textarea.error {
+  border-color: red;
+}

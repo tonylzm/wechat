@@ -1,0 +1,103 @@
+/* pages/common-invite/common-invite.wxss */
+/* 根视图 */
+.card {
+  width: 94%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 表单容器 */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* 输入框样式 */
+input, picker, button {
+  width: 100%;
+  height: 118px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 复选框样式 */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* 下拉框样式 */
+.picker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 按钮样式 */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 错误提示样式（根据需要添加） */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 优化车牌号码输入框样式 */
+
+
+
+
+
+input{
+  position: absolute;
+  left:0;
+  top:6px;
+  margin:0;
+  padding:0;
+  height:30px;
+  line-height:30px;
+}
+
+input ::-webkit-input-placeholder{
+   line-height: 30px;
+}
+
+input ::-moz-placeholder{
+   line-height: 30px;
+}
+
+input ::-ms-input-placeholder{
+   line-height: 30px;
+}
+.submit-button {
+  background-color: #007AFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+scroll-view{
+  height: 100%;
+}

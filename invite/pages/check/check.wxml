@@ -1,0 +1,5 @@
+<!--invite/pages/check/check.wxml-->
+<text style="position: relative; left: 260rpx; top: 243rpx">选择你需要的申请</text>
+<button style="position: relative; left: 2rpx; top: 367rpx; display: block; box-sizing: border-box" bindtap="common">普通人员申请</button>
+<button style="position: relative; left: 0rpx; top: 469rpx" bindtap="logistic">物流人员申请</button>
+<button style="position: relative; left: 1rpx; top: 570rpx" bindtap="mainten">维修人员申请</button>

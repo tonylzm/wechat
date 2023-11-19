@@ -1,0 +1,39 @@
+<!--pages/new-staff/new-staff.wxml-->
+<view class="card" style="padding: 20rpx; box-sizing: border-box; position: relative; left: 33rpx; top: 255rpx; width: 684rpx; height: 884rpx; display: block">
+<text style="position: relative; left: 235rpx; top: -1rpx">入职员工登记</text>
+
+<view style="width: 90%; margin: 0 auto;">
+    <form bindsubmit="formSubmit">
+    <view class="form-group" style="position: relative; left: -37rpx; top: 1rpx">
+      <text style="position:relative; left: 1rpx; top: 33rpx">员工姓名：</text>
+      <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 190rpx; top: -26rpx" type="text" name="staffName" placeholder="请输入员工姓名" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -37rpx; top: 15rpx; width: 637rpx; height: 104rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 22rpx;" >员工手机：</text>
+      <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; left: 190rpx; top: -38rpx; position: relative" type="number" name="staffPhone" maxlength="11" placeholder="请输入员工手机号码" />
+    </view>
+
+ <view class="form-group" style="position: relative; left: -40rpx; top: -1rpx; width: 635rpx; height: 100rpx; display: flex; align-items: center; box-sizing: border-box">
+  <text style="position: relative; left: 1rpx; top: 5rpx">员工工号：</text>
+  <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; border-radius: 10rpx; position: absolute; left: 190rpx; top: 16rpx"
+        type="text" name="staffIdcard" placeholder="请输入员工工号"  />
+</view>
+
+
+    <view class="form-group" style="position: relative; left: -35rpx; top: -2rpx; width: 635rpx; height: 100rpx; display: flex; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 34rpx; width: 195rpx; height: 57rpx; display: block; box-sizing: border-box">所属单位：</text>
+      <input style="position: relative; width: 455rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 1rpx; top: 21rpx" type="text" name="staffAffiliatedUnit" placeholder="请输入所属单位" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -37rpx; top: 6rpx; width: 631rpx; height: 102rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 36rpx">员工职位：</text>
+     <picker mode="selector" range="{{staffPosition}}" value="{{staffPositionIndex}}" bindchange="staffPositionChange" style="position: relative; left: 359rpx; top: -23rpx; width: 272rpx; height: 66rpx; display: flex; box-sizing: border-box; justify-content: center; align-items: center" name="staffPosition">
+    {{staffPosition[staffPositionIndex]}}
+</picker>
+    </view>
+
+    <button formType="submit" style="position: relative; left: -1rpx; top: 20rpx; width: 319rpx; height: 89rpx; display: block; box-sizing: border-box"> <text style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); ">提交</text></button>
+  </form>
+</view>
+</view>

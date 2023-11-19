@@ -1,0 +1,60 @@
+/* pages/employee/home/home.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.swiper {
+  width: 100%;
+  height: 300rpx;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 使底部导航栏垂直居中 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 95rpx;
+  box-sizing: border-box;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  justify-content: center; /* 使通行码垂直居中 */
+}
+
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+text {
+  margin-top: 5rpx;
+}
+
+

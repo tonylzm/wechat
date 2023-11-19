@@ -1,0 +1,36 @@
+<!-- pages/employee/invite/invite.wxml -->
+<view class="card" style="width: 740rpx; height: 1047rpx; display: block; box-sizing: border-box; position: relative; left: 6rpx; top: 62rpx">
+  <view class="step">步骤 1: 填写表单</view>
+  <form bindsubmit="submitForm">
+    <view class="form-group">
+      <text>邀请人姓名：</text>
+      <input style="width: 675rpx; height: 78rpx; display: block; box-sizing: border-box; border-radius: 10rpx; border: {{inputFocused.inviterName ? '1px solid cyan' : '1px solid lightgray'}}"
+        type="text" placeholder="请输入邀请人姓名" name="inviterName" 
+        bindfocus="onInputFocus" bindblur="onInputBlur" data-input="inviterName" />
+    </view>
+    <view class="form-group">
+      <text>邀请人手机号：</text>
+      <input style="width: 675rpx; height: 78rpx; display: block; box-sizing: border-box; border-radius: 10rpx; border: {{inputFocused.inviterPhone ? '1px solid cyan' : '1px solid lightgray'}}"
+        type="tel" placeholder="请输入邀请人手机号" name="inviterPhone" 
+        bindfocus="onInputFocus" bindblur="onInputBlur" data-input="inviterPhone" />
+    </view>
+    <view class="form-group">
+  <text>邀请到访时间：</text>
+  <picker mode="date" name="visitDate" start="{{currentDate}}" end="{{endDate}}" value="{{currentDate}}" bindchange="dateChange">
+    <view class="picker">
+      {{ currentDate }}
+    </view>
+  </picker>
+</view>
+
+    <view class="form-group">
+      <text>邀请事由：</text>
+      <textarea placeholder="请输入邀请事由" name="reason" class="textarea" style="width: 675rpx; height: 308rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx;border: {{inputFocused.reason ? '1px solid cyan' : '1px solid lightgray'}}" bindfocus="onInputFocus" bindblur="onInputBlur" data-input="reason"></textarea>
+    </view>
+    <view class="form-group">
+      <text>邀请人单位：</text>
+      <input style="width: 675rpx; height: 78rpx; display: block; box-sizing: border-box ;border-radius: 10rpx; border: {{inputFocused.inviterCompany ? '1px solid cyan' : '1px solid lightgray'}}" type="text" placeholder="请输入邀请人单位" name="inviterCompany"  bindfocus="onInputFocus" bindblur="onInputBlur" data-input="inviterCompany" />
+    </view>
+    <button form-type="submit" class="submit-button" style="position: relative; left: -1rpx; top: 24rpx; width: 675rpx; height: 116rpx; display: block; box-sizing: border-box">提交</button>
+  </form>
+</view>

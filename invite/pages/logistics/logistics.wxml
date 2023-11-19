@@ -1,0 +1,139 @@
+<!--invite/pages/logistics/logistics.wxml-->
+<!--pages/common-invite/common-invite.wxml-->
+<view class="card" style="padding: 20rpx; box-sizing: border-box; position: relative; left: 17rpx; top: 22rpx; height: auto; display: block; width: 718rpx">
+<view style="width: 90%; margin: 0 auto;">
+    <form bindsubmit="formSubmit" style="width: 709rpx; height: 1844rpx; display: inline; box-sizing: content-box; position: relative; left: 22rpx; top: 1rpx">
+    <view class="form-group" style="position: relative; left: -37rpx; top: 1rpx">
+      <text style="position:relative; left: 1rpx; top: 33rpx">访客姓名：</text>
+      <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 190rpx; top: -26rpx" type="text" name="visitorName" placeholder="请输入访客姓名" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -37rpx; top: 15rpx; width: 637rpx; height: 104rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 22rpx">访客手机：</text>
+      <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; left: 190rpx; top: -38rpx; position: relative" type="number" name="visitorPhone" placeholder="请输入访客手机" maxlength="11" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -37rpx; top: 6rpx; width: 637rpx; height: 109rpx; display: block; box-sizing: border-box">
+  <text style="position: relative; left: 1rpx; top: 40rpx">验证码：</text>
+  <input style="width: 235rpx; height: 70rpx; display: block; box-sizing: border-box; left: 192rpx; top: -19rpx; position: relative" type="number" name="verificationCode" placeholder="请输入验证码" />
+  <button bindtap="sendVerificationCode" style="position: relative; left: 224rpx; top: -81rpx; width: 208rpx; height: 55rpx; display: flex; justify-content: center; align-items: center; box-sizing: border-box; background-color: transparent; border: 1px solid #0070C0; border-radius: 10px; color: #0070C0">
+    <text style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16rpx;">发送验证码</text>
+  </button>
+</view>
+
+
+
+
+ <view class="form-group" style="position: relative; left: -40rpx; top: -1rpx; width: 635rpx; height: 100rpx; display: flex; align-items: center; box-sizing: border-box">
+  <text style="position: relative; left: 1rpx; top: 5rpx">身份证号码：</text>
+  <input style="width: 455rpx; height: 70rpx; display: block; box-sizing: border-box; border-radius: 10rpx; position: absolute; left: 190rpx; top: 16rpx"
+        type="text" name="idcard" placeholder="请输入身份证号码" maxlength="18"  />
+</view>
+
+
+    <view class="form-group" style="position: relative; left: -35rpx; top: -2rpx; width: 635rpx; height: 100rpx; display: flex; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 34rpx; width: 195rpx; height: 57rpx; display: block; box-sizing: border-box">所属单位：</text>
+      <input style="position: relative; width: 455rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 1rpx; top: 21rpx" type="text" name="affiliatedUnit" placeholder="请输入所属单位" />
+    </view>
+
+
+    <view class="form-group" style="position: relative; left: -35rpx; top: -2rpx; width: 635rpx; height: 100rpx; display: flex; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 34rpx; width: 195rpx; height: 57rpx; display: block; box-sizing: border-box">物流单号：</text>
+      <input style="position: relative; width: 455rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 1rpx; top: 21rpx" type="text" name="logisticsnum" placeholder="请输入物流单号" maxlength="12" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -35rpx; top: -2rpx; width: 635rpx; height: 100rpx; display: flex; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 34rpx; width: 195rpx; height: 57rpx; display: block; box-sizing: border-box">运输物品：</text>
+      <input style="position: relative; width: 455rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 1rpx; top: 21rpx" type="text" name="goods" placeholder="请输入运输物品" />
+    </view>
+
+    <view class="form-group" style="position: relative; left: -40rpx; top: -8rpx; width: 635rpx; height: 109rpx; display: flex; box-sizing: border-box">
+  <text style="position: relative; left: 0rpx; top: 8rpx; width: 272rpx; height: 66rpx; display: block; box-sizing: border-box">预估到达日期：</text>
+  <picker mode="selector" range="{{dateOptions}}" value="{{dateOptions.indexOf(selectedDate)}}" bindchange="datePickerChange" style="position: relative; left: 91rpx; top: 8rpx; width: 272rpx; height: 66rpx; display: flex; box-sizing: border-box; justify-content: center; align-items: center" name="arrivedate">
+    {{selectedDate}}
+</picker>
+
+</view>
+<view class="form-group" style="display: flex; box-sizing: border-box; position: relative; left: -40rpx; top: -35rpx; width: 657rpx; height: 100rpx">
+  <text style="position: relative; left: 0rpx; top: 29rpx; box-sizing: border-box; width: 243rpx; height: 46rpx; display: block;">预估访问时间：</text>
+  <picker mode="selector" range="{{timeOptions}}" value="{{timeOptions.indexOf(selectedTime1)}}" bindchange="timePickerChange1" name="arrivetime" style="width: 197rpx; height: 66rpx; display: flex; box-sizing: border-box; position: relative; left: -8rpx; top: 19rpx; justify-content: center; align-items: center">
+    {{selectedTime1}}
+  </picker>
+  <text style="position: relative; left: -8rpx; top: 29rpx">-</text>
+  <picker mode="selector" range="{{timeOptions}}" value="{{timeOptions.indexOf(selectedTime2)}}" bindchange="timePickerChange2" name="lefttime" style="width: 197rpx; height: 66rpx; display: flex; box-sizing: border-box; position: relative; left: -8rpx; top: 18rpx; justify-content: center; align-items: center">
+    {{selectedTime2}}
+  </picker>
+</view>
+
+
+
+<view class="form-group" style="position: relative; width: 636rpx; display: flex; flex-direction: column; align-items: flex-start; box-sizing: border-box; left: -35rpx; top: -8rpx; height: 251rpx">
+  <text style="position: relative; left: 1rpx; top: 0rpx">到访区域：</text>
+  <checkbox-group bindchange="checkboxChange">
+  <view class="checkbox-item">
+    <label class="checkbox">
+      <checkbox  value="仓库"  /> 仓库
+    </label>
+  </view>
+  <view class="checkbox-item">
+    <label class="checkbox">
+      <checkbox value="码头区"  /> 码头区
+    </label>
+  </view>
+  <view class="checkbox-item">
+    <label class="checkbox">
+      <checkbox  value="办公大楼"  /> 办公大楼
+    </label>
+  </view>
+  </checkbox-group>
+</view>
+
+
+
+
+
+    <view class="form-group" style="position: relative; left: -37rpx; top: 6rpx; width: 631rpx; height: 102rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 1rpx; top: 36rpx">参观事由：</text>
+     <picker mode="selector" range="{{visitReasons}}" value="{{visitReasonIndex}}" bindchange="visitReasonChange" style="position: relative; left: 359rpx; top: -23rpx; width: 272rpx; height: 66rpx; display: flex; box-sizing: border-box; justify-content: center; align-items: center" name="visitreason">
+    {{visitReasons[visitReasonIndex]}}
+</picker>
+
+    </view>
+
+    <view class="form-group" style="position: relative; left: -38rpx; top: 4rpx; width: 635rpx; height: 102rpx; display: block; box-sizing: border-box">
+  <text style="position: relative; left: 0rpx; top: 27rpx">是否用车：</text>
+  <switch checked="{{useCar}}" bindchange="toggleUseCar" style="position: relative; left: 521rpx; top: -27rpx; width: 113rpx; height: 66rpx; display: block; box-sizing: border-box"></switch>
+</view>
+
+
+    <view class="form-group" style="position: relative; left: -35rpx; top: -4rpx; width: 658rpx; height: 252rpx; display: block; box-sizing: border-box">
+  <text style="position: relative; left: 2rpx; top: 0rpx">车牌号码：</text>
+  <view class="license-plate-input" style="width: 660rpx; height: 214rpx; display: flex; box-sizing: border-box; position: relative; left: 1rpx; top: -1rpx">
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 0rpx; top: 37rpx" type="text" name="licensePlate1" maxlength="1"  value="{{licensePlate[0]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 0}}" data-index="0"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 82rpx; top: 37rpx" type="text" name="licensePlate2" maxlength="1"  value="{{licensePlate[1]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 1}}" data-index="1"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 164rpx; top: 37rpx" type="text" name="licensePlate3" maxlength="1"  value="{{licensePlate[2]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 2}}" data-index="2" />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 246rpx; top: 37rpx" type="text" name="licensePlate4" maxlength="1"  value="{{licensePlate[3]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 3}}" data-index="3"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 328rpx; top: 37rpx" type="text" name="licensePlate5" maxlength="1" value="{{licensePlate[4]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 4}}" data-index="4"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 410rpx; top: 37rpx" type="text" name="licensePlate6" maxlength="1"  value="{{licensePlate[5]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 5}}" data-index="5"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 492rpx; top: 37rpx" type="text" name="licensePlate7" maxlength="1"  value="{{licensePlate[6]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 6}}" data-index="6"  />
+    <input style="width: 82rpx; height: 156rpx; display: block; box-sizing: border-box; position: absolute; left: 574rpx; top: 37rpx" type="text" name="licensePlate8" maxlength="1"  value="{{licensePlate[7]}}" bindinput="licensePlateInput" bindblur="licensePlateBlur" focus="{{current == 7}}" data-index="7"  />
+  </view>
+</view>
+<view class="form-group" style="position: relative; left: -38rpx; top: 4rpx; width: 635rpx; height: 102rpx; display: block; box-sizing: border-box">
+  <text style="position: relative; left: 0rpx; top: 27rpx">是否携带人员：</text>
+  <switch checked="{{elsepeople}}" bindchange="togelsepeople" style="position: relative; left: 521rpx; top: -27rpx; width: 113rpx; height: 66rpx; display: block; box-sizing: border-box"></switch>
+</view>
+
+<view class="form-group" style="position: relative; left: -37rpx; top: 4rpx; width: 635rpx; height: 89rpx; display: block; box-sizing: border-box">
+  <text style="position: relative; left: 0rpx; top: 27rpx">输入人员信息(最多200字）：</text>
+ 
+</view>
+<view class="form-group" style="position: relative; left: -37rpx; top: 2rpx; width: 653rpx; height: 252rpx; display: block; box-sizing: border-box">
+  <textarea style="width: 660rpx; height: 246rpx; display: block; box-sizing: border-box; left: -2rpx; top: 0rpx; border: 1px solid rgb(187, 185, 185); position: relative" maxlength="200" name="elsepeopleinfo"></textarea>
+</view>
+
+
+    <button formType="submit" style="position: relative; left: -17rpx; top: -1rpx; width: 319rpx; height: 89rpx; display: block; box-sizing: border-box"> <text style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); ">提交</text></button>
+  </form>
+</view>
+</view>

@@ -1,0 +1,58 @@
+<!--pages/common-login/common-profile/common-profile.wxml-->
+<view class="card" style="width: 653rpx; height: 483rpx; display: block; box-sizing: border-box; left: -2rpx; top: 35rpx; position: relative">
+  <image style="position: relative; width: 250rpx; height: 250rpx; display: inline-block; box-sizing: border-box; left: 182rpx; top: 44rpx" src="../../images/10.png" />
+
+  <view style="display: flex; justify-content: center; align-items: center; position: relative; left: 2rpx; top: 109rpx">
+<text style="position: relative; left: 1rpx; top: 1rpx">UID:{{text}}</text>
+</view>
+
+  <text style="position: relative; left: 251rpx; top: 185rpx" data-type="info" bindtap="toggleContent">信息详情</text>
+<text style="position: relative; left: -51rpx; top: 185rpx" data-type="alert" bindtap="toggleContent">消息提醒</text>
+<text style="position: relative; left: 199rpx; top: 185rpx" data-type="history" bindtap="toggleContent">历史记录</text>
+<view class="divider" style="width: 655rpx; height: 5rpx; display: block; box-sizing: border-box; left: -39rpx; top: 212rpx; position: relative"></view>
+  <view hidden="{{!showInfoContent}}" style="position: relative; left: 2rpx; top: 248rpx">
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">真实姓名：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{visitorName}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">单位名称：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{affiliatedUnit}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">证件号码：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{idcard}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: 35rpx; left: 2rpx; line-height: 64rpx; width: 230rpx">手机号码：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 248rpx; line-height: 64rpx; top: -29rpx" >{{visitorPhone}}</text>
+  </view>
+  <view hidden="{{!showAlertContent}}"style="position: relative; left: 20rpx; top: 248rpx">这是提醒内容</view>
+  <view hidden="{{!showHistoryContent}}"style="position: relative; left: 20rpx; top: 248rpx" style="position: relative; left: 1rpx; top: 208rpx">
+   
+      <view class="navbar" style="position: relative; left: -1rpx; top: 8rpx; width: 230rpx; height: 49rpx; display: block; box-sizing: border-box">
+      当前页数：{{currentPage + 1}}
+      </view>
+      <picker mode="selector" range="{{[4, 6, 8]}}" value="{{8}}" bindchange="changePageSize" style="width: 0rpx; height: 49rpx; display: block; box-sizing: border-box">
+       <view class="navbar" style="width: 337rpx; height: 46rpx; display: block; box-sizing: border-box">
+    当前显示数据条数：{{pageSize}} 
+      </view>
+    </picker>
+
+   
+    <image src="../../images/24.png" style="width: 66rpx; height: 49rpx; display: inline-block; box-sizing: border-box; position: relative; left: 543rpx; top: -78rpx" name="next" bindtap="incrementPage"></image>
+      <image src="../../images/25.png" style="width: 66rpx; height: 49rpx; display: inline-block; box-sizing: border-box; position: relative; left: 414rpx; top: -78rpx" name="back" bindtap="decrementPage"></image>
+<block wx:for="{{list}}" wx:key="index">
+<!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+<view class="view_tupian_wenzi" bindtap="click" id="{{index}}" style="position: relative; left: -2rpx; top: -57rpx">
+  <image style="width: 98rpx; height: 94rpx; display: block; box-sizing: border-box; position: relative; left: -31rpx; top: -22rpx"  class="image_1" src="../../images/5.png" />
+  <!-- 包裹两行文字 -->
+  <view class="view_wenzi2" style="width: 333rpx; height: 94rpx; display: block; box-sizing: border-box">
+    <image style="position: relative; left: 311rpx; top: 5rpx; width: 100rpx; height: 85rpx; display: inline-block; box-sizing: border-box"  class="image_2" src="{{item.url}}" />
+    <text style="position: relative; left: -129rpx; top: -64rpx">姓名:{{item.name}}</text>
+    <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -29rpx; top: -45rpx">联系电话:{{item.content}}</text>
+  </view> 
+</view>
+</block>
+  
+  </view>
+  </view>
+
+  

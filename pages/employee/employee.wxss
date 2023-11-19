@@ -1,0 +1,59 @@
+/* pages/employee/employee.wxss */
+.login-card {
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx;
+  width: 80%;
+  margin: 400rpx auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 上下居中 */
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+input {
+  flex: 1;
+  height: 60rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 0 10rpx;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button,
+.reset-button {
+  display: inline-block;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  padding: 15rpx;
+  font-size: 20rpx;
+}
+
+.login-button {
+  width: 60%; /* 登录按钮占60%宽度 */
+}
+
+.reset-button {
+  width: 30%; /* 重置按钮占30%宽度 */
+  background-color: #ccc;
+  margin-left: 10%; /* 添加左边距以分隔按钮 */
+}

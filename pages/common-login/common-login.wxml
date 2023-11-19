@@ -1,0 +1,57 @@
+<swiper indicator-dots="true" autoplay="true">
+  <block wx:for="{{images}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" style="width: 100%; height: 100%; position: relative; left: 1rpx; top: 0rpx" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="card" style="width: 707rpx; height: 1085rpx; display: block; box-sizing: border-box; left: 2rpx; top: 2rpx; position: relative">
+  <image style="position: absolute; left: 254rpx; top: 149rpx; width: 200rpx; height: 200rpx; display: block; box-sizing: border-box" src="../images/5.png" />
+  <text style="position: relative; left: 19rpx; top: 66rpx;line-height: 64rpx;">人员信息</text>
+
+  <view style="position: relative; width: 525rpx; background: #ffffff; height: 1096rpx; left: 94rpx; top: 347rpx; display: block; box-sizing: border-box">
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -98rpx; line-height: 64rpx; width: 261rpx">访客姓名：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx" >{{visitorName}}</text>
+  
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">所属公司：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -93rpx">{{visitorCompany}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -100rpx; line-height: 64rpx; width: 261rpx">入园事由：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx">{{visitorReason}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -73rpx; line-height: 64rpx; width: 237rpx">邀约人：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx">{{visitorPerson}}</text> 
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -121rpx; line-height: 64rpx; width: 333rpx">邀约人联系方式：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -92rpx" >{{visitorPhone}}</text> 
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -86rpx; line-height: 64rpx; width: 261rpx">访问区域：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -93rpx"  >{{visitorAreas}}</text>
+
+    <text style="position: relative; height: 64rpx; display: block; box-sizing: border-box; top: -29rpx; left: -85rpx; line-height: 64rpx; width: 239rpx">车牌号：</text>
+    <text style="position: relative; width: 361rpx; height: 64rpx; display: block; box-sizing: border-box; left: 176rpx; line-height: 64rpx; top: -94rpx">{{visitorCarnum}}</text>
+    </view>
+  </view>
+  <view class="bottom-nav">
+    <navigator url="/pages/employee/manage/manage" style="position: relative; left: 70rpx; top: 1rpx">
+        <view class="nav-item" style="width: 103rpx; height: 86rpx; display: flex; box-sizing: border-box; left: 0rpx; top: -1rpx; position: relative">
+            <image class="icon" src="../images/7.png"></image>
+            <text>管理</text>
+        </view>
+    </navigator>
+    <view class="divider"></view>
+ 
+        <view class="nav-item center" style="position: relative; left: 8rpx; top: -1rpx" bindtap="navigateToQRCode">
+            <image class="icon" src="../images/9.png"></image>
+            <text>通行码</text>
+        </view>
+
+    <view class="divider"></view>
+   
+        <view class="nav-item" style="position: relative; left: -49rpx; top: -2rpx" bindtap="navigateToProfile">
+            <image class="icon" src="../images/8.png"></image>
+            <text>个人中心</text>
+        </view>
+
+</view>

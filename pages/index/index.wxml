@@ -19,5 +19,7 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Click me </button>
   </view>
+
 </view>

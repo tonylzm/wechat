@@ -1,0 +1,5 @@
+/* pages/firstpg/firstpg.wxss */
+.toptext{
+  font-size: 30px;
+  font-weight: bold;
+}

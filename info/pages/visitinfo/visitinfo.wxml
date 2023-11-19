@@ -1,0 +1,18 @@
+<!--info/pages/visitinfo/visitinfo.wxml-->
+<text style="position: relative; left: 71rpx; top: 80rpx" data-status="即将到访" bindtap="click" class="{{selectedStatus === '即将到访' ? 'selected' : ''}}">即将到访</text>
+<text style="position: relative; left: 204rpx; top: 80rpx" data-status="正在访问" bindtap="click" class="{{selectedStatus === '正在访问' ? 'selected' : ''}}">正在访问</text>
+<text style="position: relative; left: 355rpx; top: 80rpx" data-status="已访问" bindtap="click" class="{{selectedStatus === '已访问' ? 'selected' : ''}}">已访问</text>
+
+
+<block wx:for="{{list}}" wx:key="index">
+<!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+<view class="view_tupian_wenzi" bindtap="click" id="{{index}}" style="position: relative; left: 2rpx; top: 116rpx">
+  <image  class="image_1" src="../../../pages/images/5.png" />
+  <!-- 包裹两行文字 -->
+  <view class="view_wenzi2">
+    <image style="position: relative; left: 391rpx; top: 38rpx"  class="image_2" src="{{item.url}}" />
+    <text style="position: relative; left: -3rpx; top: -62rpx">姓名:{{item.name}}</text>
+    <text class="text_small" style="width: 470rpx; height: 38rpx; display: block; box-sizing: border-box; position: relative; left: -2rpx; top: -66rpx">联系电话:{{item.content}}</text>
+  </view> 
+</view>
+</block>

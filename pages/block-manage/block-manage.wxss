@@ -1,0 +1,57 @@
+/* pages/block-manage/block-manage.wxss */
+
+.card {
+  position: relative;
+  width: 80%; /* 您可以根据需要调整卡片的宽度 */
+  background: #ffffff;
+  margin: 0 auto; /* 水平居中卡片 */
+  box-sizing: border-box;
+  padding: 20rpx; /* 为卡片添加一些内边距 */
+}
+
+.approve{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: -1rpx; 
+  top:642rpx; 
+  width: 200rpx; 
+  height: 84rpx; 
+  display: block; 
+  box-sizing: border-box;
+  background-color: rgb(2, 151, 250);
+  color: #ffffff;
+  align-items: center;
+}
+.refused{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: -261rpx; 
+  top: 561rpx;
+  width: 200rpx; 
+  height: 84rpx; 
+  display: block; 
+  box-sizing: border-box;
+  background-color: rgb(243, 108, 108);
+  color:#ffffff;
+  align-items: center;
+}
+.block{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200rpx; 
+  height: 84rpx; 
+  display: block; 
+  box-sizing: border-box; 
+  left: 257rpx; 
+  top: 481rpx; 
+  position: relative;
+  background-color: black;
+  color: #ffffff;
+  align-items: center;
+}

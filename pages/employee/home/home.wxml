@@ -1,0 +1,64 @@
+<swiper indicator-dots="true" autoplay="true">
+  <block wx:for="{{images}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" style="width: 100%; height: 100%;" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="bottom-nav">
+    <navigator url="/pages/employee/manage/manage" style="position: relative; left: 70rpx; top: 1rpx">
+        <view class="nav-item" style="width: 103rpx; height: 86rpx; display: flex; box-sizing: border-box; left: 0rpx; top: -1rpx; position: relative">
+            <image class="icon" src="../../images/7.png"></image>
+            <text>管理</text>
+        </view>
+    </navigator>
+    <view class="divider"></view>
+
+        <view class="nav-item center" style="position: relative; left: 25rpx; top: 0rpx">
+            <image class="icon" src="../../images/9.png" bindtap= "navigateToQRCode"></image>
+            <text>通行码</text>
+        </view>
+
+    <view class="divider"></view>
+   
+        <view class="nav-item" style="position: relative; left: -49rpx; top: -7rpx">
+            <image class="icon" src="../../images/8.png" bind:tap="navigateToProfile"></image>
+            <text>个人中心</text>
+        </view>
+    
+</view>
+
+
+
+
+  
+<image style="position: absolute; left: 66rpx; top: 606rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/4.png" data-url="../../new-staff/new-staff" bindtap="redirectToPage" />
+
+<image style="position: absolute; left: 301rpx; top: 352rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/5.png" data-url="/pages/application/application" bindtap="redirectToPage" />
+
+<image style="position: absolute; left: 518rpx; top: 352rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../info/pages/visitinfo/visitinfo" bindtap="redirectToPage" />
+
+<image style="position: absolute; left: 67rpx; top: 351rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../invite/pages/power/power" bindtap="redirectToPage" />
+
+<image style="position: absolute; left: 299rpx; top: 604rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../invite/invite" bindtap="redirectToPage" />
+
+<image style="position: absolute; left: 512rpx; top: 604rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../invite/pages/power/power" bindtap="redirectToPage" />
+
+<text style="position: absolute; left: 111rpx; top: 772rpx">邀请</text>
+<text style="position: absolute; left: 317rpx; top: 521rpx">访客管理</text>
+<text style="position: absolute; left: 530rpx; top: 523rpx">访客信息</text>
+<text style="position: absolute; left: 82rpx; top: 521rpx">内部管理</text>
+<text style="position: absolute; left: 317rpx; top: 770rpx">预约管理</text>
+<text style="position: absolute; left: 526rpx; top: 770rpx">系统管理</text>
+
+
+
+
+
+
+
+
+
+
+
+

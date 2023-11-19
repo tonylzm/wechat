@@ -1,0 +1,46 @@
+<!--pages/firstpg/firstpg.wxml-->
+<text style="position: relative; left: 44rpx; display: block; top: 225rpx; width: 518rpx; height: 108rpx; box-sizing: border-box" class="toptext">请选择你的身份</text>
+
+<navigator url="../employee/employee" style="width: 160rpx; height: -4rpx; display: block; box-sizing: border-box; position: relative; left: 128rpx; top: 403rpx">
+<image style="position: relative; left: 1rpx; top: 8rpx; width: 160rpx; height: 160rpx; display: inline-block; box-sizing: border-box" src="../images/11.png"/>
+</navigator>
+
+<navigator url="../common-invite/common-invite"style="width: 160rpx; height: 160rpx; display: block; box-sizing: border-box; position: relative; left: 474rpx; top: 243rpx">
+<image style="position: relative; width: 160rpx; height: 160rpx; display: inline-block; box-sizing: border-box; left: 1rpx; top: 0rpx" src="../images/12.png"/>
+</navigator>
+
+<navigator url="../../invite/pages/construction/construction" style="width: 160rpx; height: 160rpx; display: block; box-sizing: border-box; position: relative; left: 127rpx; top: 400rpx">
+<image style="position: relative; left: -1rpx; top: -1rpx; width: 160rpx; height: 160rpx; display: inline-block; box-sizing: border-box" src="../images/13.png"/>
+</navigator>
+
+<navigator url="../../invite/pages/logistics/logistics" style="width: 160rpx; height: 160rpx; display: block; box-sizing: border-box; position: relative; left: 472rpx; top: 239rpx">
+<image style="position: relative; left: 1rpx; top: 0rpx; width: 160rpx; height: 160rpx; display: inline-block; box-sizing: border-box" src="../images/14.png"/>
+</navigator>
+
+
+
+
+
+
+<text style="position: relative; left: 136rpx; display: block; top: -45rpx; width: 20vw; height: 7vw; box-sizing: border-box; font-size: 4vw">内部员工</text>
+<text style="position: relative; left: 481rpx; display: block; top: -100rpx; width: 20vw; height: 7.3vw; box-sizing: border-box; font-size: 4vw">普通人员</text>
+<text style="position: relative; left: 136rpx; display: block; top: 158rpx; width: 20vw; height: 7vw; box-sizing: border-box; font-size: 4vw">施工人员</text>
+<text style="position: relative; left: 481rpx; display: block; top: 106rpx; width: 20vw; height: 7.3vw; box-sizing: border-box; font-size: 4vw">物流人员</text>
+
+
+<navigator url="../other-login/other-login" style="width: 90rpx; height: 90rpx; display: block; box-sizing: border-box; position: relative; left: 602rpx; top: -687rpx">
+<image style="position: relative; left: 1rpx; top: -45rpx; width: 90rpx; height: 90rpx; display: inline-block; box-sizing: border-box" src="../images/26.png"/>
+</navigator>
+
+<text style="position: relative; left: 621rpx; top: -728rpx; font-size: small">登 录</text>
+
+
+
+
+
+
+
+
+
+
+

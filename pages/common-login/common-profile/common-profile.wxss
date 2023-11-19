@@ -1,0 +1,50 @@
+/* pages/common-login/common-profile/common-profile.wxss */
+.card {
+  position: relative;
+  width: 80%;
+  background: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 设置阴影 */
+}
+
+.divider {
+ 
+  background-color: rgb(59, 59, 59); /* 横线的颜色 */
+  margin: 0 10px; /* 调整横线与文本之间的间距 */
+}
+
+.view_tupian_wenzi {
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  /* 圆角 */
+  border-radius: 20rpx;
+
+  /* 边 */
+  border: 3rpx solid #E0E3DA;
+  box-shadow:5rpx 5rpx 5rpx 5rpx #E0E3DA;
+
+  background-color: #ffffff;
+  margin: 30rpx;
+
+  /* padding使得文字和图片不至于贴着边框 */
+  padding: 30rpx;
+
+}
+
+/* 图片 */
+
+.image_1 {
+  width: 60rpx;
+  height: 50rpx;
+ 
+}
+.image_2 {
+  width: 60rpx;
+  height: 50rpx;
+ 
+}

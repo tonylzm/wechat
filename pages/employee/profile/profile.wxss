@@ -1,0 +1,14 @@
+.card {
+  position: relative;
+  width: 80%;
+  background: #ffffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 设置阴影 */
+}
+.divider {
+ 
+  background-color: rgb(59, 59, 59); /* 横线的颜色 */
+  margin: 0 10px; /* 调整横线与文本之间的间距 */
+}
