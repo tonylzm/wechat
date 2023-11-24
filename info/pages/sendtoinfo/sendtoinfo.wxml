@@ -1,0 +1,8 @@
+<!--info/pages/sendtoinfo/sendtoinfo.wxml-->
+<view class="container" style="position: relative; left: -1rpx; top: 237rpx">
+<text style="position: relative; left: -22rpx; top: -37rpx; width: 647rpx; height: 37rpx; display: block; box-sizing: content-box">向{{content}}发送消息</text>
+<input type="text" class="input-area" maxlength="10" value="{{title}}" bindinput="bindText" placeholder="请输入标题..." style="width: 647rpx; height: 50rpx; display: block; box-sizing: content-box; left: -2rpx; top: 2rpx; position: relative" />
+    <textarea value="{{msgValue}}" class="input-area" bindinput="bindTextAreaBlur" placeholder="请输入消息内容..." style="width: 647rpx; height: 405rpx; display: block; box-sizing: content-box; left: -2rpx; top: 2rpx; position: relative"></textarea>
+    <button class="submit-button" bindtap="submitForm" style="position: relative; left: -163rpx; top: 20rpx">提交</button>
+    <button class="reset-button" bindtap="resetForm" style="position: relative; left: 163rpx; top: -71rpx">重置</button>
+</view>

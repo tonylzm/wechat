@@ -28,10 +28,11 @@ Page({
         }));
         // 根据参数值筛选数据
         let baseFilter = item => item.applicationStatus === "通过";
+        let hisFilter = item => item.applicationStatus === "已访问";
         let filteredData;
         const statusFilters = {
-          '正在访问': item => baseFilter(item) && item.uuid !== null && item.uuid !== "000000000000000000000000",
-          '已访问': item => baseFilter(item) && item.uuid === "000000000000000000000000",
+          '正在访问': item => baseFilter(item) && item.uuid !== null,
+          '已访问': item => hisFilter(item) && item.uuid === "000000000000000000000000",
           '即将到访': item => baseFilter(item) && item.uuid === null,
         };
         filteredData = processedData.filter(item => statusFilters[status](item));

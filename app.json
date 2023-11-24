@@ -27,7 +27,11 @@
     "invite/pages/power/power",
     "invite/pages/editpower/editpower",
     "invite/pages/dateselect/dateselect",
-    "info/pages/visitinfo/visitinfo"
+    "info/pages/visitinfo/visitinfo",
+    "info/pages/inviteAudit/inviteAudit",
+    "info/pages/sendinfo/sendinfo",
+    "info/pages/sendtoinfo/sendtoinfo",
+    "info/pages/showinfo/showinfo"
   ],
   "window": {
     "backgroundTextStyle": "dark",

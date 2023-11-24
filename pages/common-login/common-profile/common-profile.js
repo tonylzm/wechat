@@ -35,6 +35,7 @@ Page({
         showAlertContent: true,
         showHistoryContent:false,
       });
+      this.loadinfo();
     }else if(type === 'history'){
       this.setData({
         showInfoContent: false,
@@ -100,7 +101,7 @@ Page({
         console.log(rawData)
         const processedData = rawData.map(item => ({
           name: item.visitorName,
-          content: item.visitorPhone,
+          content: item.uuid,
           applicationStatus: item.applicationStatus,
           uuid:item.uuid,
         }));
@@ -129,7 +130,34 @@ Page({
       },
     });
   },
-
+  loadinfo: function () {
+    wx.request({
+      url: 'http://localhost:8081/getsub',
+      method: 'GET',
+      data:{
+        page:this.data.currentPage,
+        pageSize:this.data.pageSize,
+        visitPhone:this.data.visitorPhone
+      },
+      success: (res) => {
+        const rawData = res.data.content; // 假设后端返回的数据是一个包含多个字段的对象数组
+        console.log(rawData)
+        const processedData = rawData.map(item => ({
+          name: item.title,
+          content: item.time,
+          substance:item.substance,
+           
+        }));
+        // 在这里根据参数值设置不同的图片URL
+       this.setData({
+          list:  processedData,
+        });
+      },
+      fail: (error) => {
+        console.error('请求失败:', error);
+      },
+    });
+  },
 incrementPage: function () {
     this.setData({
       currentPage: this.data.currentPage + 1,
@@ -157,7 +185,8 @@ changePageSize: function (e) {
 click: function (e) {
   const status = e.currentTarget.dataset.status; // 获取点击的文本元素的 status 属性值
   if (status) {
-    this.loadDataFromBackend(status);     
+    this.loadDataFromBackend(status); 
+        
   } else{
     const id = e.currentTarget.id;     
     // const content = this.data.list[id].content;
@@ -168,6 +197,23 @@ click: function (e) {
       console.log("按了：", id);
     wx.navigateTo({
         url: '../../../invite/pages/detailed-info/detailed-info?uuid=' + uuid,
+    });
+       
+  }
+},
+clickinfo: function (e) {
+  const status = e.currentTarget.dataset.status; // 获取点击的文本元素的 status 属性值
+  if (status) {
+    this.loadDataFromBackend(status); 
+        
+  } else{
+    const id = e.currentTarget.id;     
+    // const content = this.data.list[id].content;
+    const uuid=this.data.list[id].uuid;
+    const substance=this.data.list[id].substance;
+    console.log("按了：", id);
+    wx.navigateTo({
+        url: '../../../info/pages/showinfo/showinfo?substance='+substance,
     });
        
   }

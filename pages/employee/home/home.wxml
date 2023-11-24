@@ -32,7 +32,7 @@
 
 
   
-<image style="position: absolute; left: 66rpx; top: 606rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/4.png" data-url="../../new-staff/new-staff" bindtap="redirectToPage" />
+
 
 <image style="position: absolute; left: 301rpx; top: 352rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/5.png" data-url="/pages/application/application" bindtap="redirectToPage" />
 
@@ -40,17 +40,18 @@
 
 <image style="position: absolute; left: 67rpx; top: 351rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../invite/pages/power/power" bindtap="redirectToPage" />
 
-<image style="position: absolute; left: 299rpx; top: 604rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../invite/invite" bindtap="redirectToPage" />
+<image style="position: absolute; left: 66rpx; top: 602rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/4.png" data-url="../invite/invite" bindtap="redirectToPage" />
 
-<image style="position: absolute; left: 512rpx; top: 604rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../invite/pages/power/power" bindtap="redirectToPage" />
+<image style="position: absolute; left: 301rpx; top: 600rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/6.png" data-url="../../../invite/pages/power/power" bindtap="redirectToPage" />
 
-<text style="position: absolute; left: 111rpx; top: 772rpx">邀请</text>
+<image style="position: absolute; left: 516rpx; top: 599rpx; width: 150rpx; height: 150rpx; display: inline-block; box-sizing: border-box" src="../../images/4.png" data-url="../../../info/pages/sendinfo/sendinfo" bindtap="redirectToPage" />
+
 <text style="position: absolute; left: 317rpx; top: 521rpx">访客管理</text>
 <text style="position: absolute; left: 530rpx; top: 523rpx">访客信息</text>
 <text style="position: absolute; left: 82rpx; top: 521rpx">内部管理</text>
-<text style="position: absolute; left: 317rpx; top: 770rpx">预约管理</text>
-<text style="position: absolute; left: 526rpx; top: 770rpx">系统管理</text>
-
+<text style="position: absolute; left: 82rpx; top: 769rpx">预约管理</text>
+<text style="position: absolute; left: 315rpx; top: 767rpx">系统管理</text>
+<text style="position: absolute; left: 528rpx; top: 765rpx">消息推送</text>
 
 
 

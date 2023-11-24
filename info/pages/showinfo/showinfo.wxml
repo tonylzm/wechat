@@ -1,0 +1,6 @@
+<!--info/pages/showinfo/showinfo.wxml-->
+<view style="position: relative; left: 1rpx; top: 485rpx">
+  
+  <textarea value="{{text}}" class="input-area" bindinput="bindTextAreaBlur" placeholder="请输入消息内容..." style="width: 647rpx; height: 405rpx; display: block; box-sizing: content-box; left: 33rpx; top: -87rpx; position: relative"></textarea>
+  <button bindtap="goBack" style="position: relative; left: 1rpx; top: -1rpx">确认</button>
+</view>

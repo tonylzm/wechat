@@ -62,13 +62,24 @@ Page({
               image1: '../images/20.jpg',
               showview:true,
               showview1:false,
-              showview2:false,
-              
+              showview2:false,   
             });
             if (this.intervalId) {
               clearInterval(this.intervalId);
             };
             break;
+            case "已访问":
+              this.setData({
+                text1: '你已访问，进入个人中心',
+                image1: '../images/20.jpg',
+                showview:true,
+                showview1:false,
+                showview2:false,   
+              });
+              if (this.intervalId) {
+                clearInterval(this.intervalId);
+              };
+              break;
           case "拒绝":
             this.setData({
               text1: '审核已完成，结果为：' + res.data,
